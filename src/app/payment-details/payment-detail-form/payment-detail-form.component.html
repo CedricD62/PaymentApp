@@ -1,1 +1,33 @@
-<p>payment-detail-form works!</p>
+<form>
+    <input type="hidden" name="id" [value]="service.formData.id">
+    <div class="form-group">
+        <label>
+            CARD OWNER NAME
+        </label>
+        <input class="form-control form-control-lg" placeholder="Fill Name"
+        name="cardOwnerName" #cardOwnerName="ngModel" [(ngModel)]="service.formData.cardOwnerName">
+    </div>
+    <div class="form-group">
+        <label>
+            CARD NUMBER
+        </label>
+        <input class="form-control form-control-lg" placeholder="16 Digit card number"
+        name="cardNumber" #cardNumber="ngModel" [(ngModel)]="service.formData.cardNumber">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>
+                SECURITY CODE
+            </label>
+            <input type="password" class="form-control form-control-lg" placeholder="Security Code"
+            name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode">
+        </div>
+        <div class="form-group col-md-6">
+            <label>
+                CALIDE THROUGHT
+            </label>
+            <input class="form-control form-control-lg" placeholder="MM/YY"
+            name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate">
+        </div>
+    </div>
+</form>
