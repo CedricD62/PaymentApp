@@ -22,7 +22,10 @@ export class PaymentDetailService {
   }
 
   putPaymentDetail(){
-    return this.http.post(`${this.baseUrl}/${this.formData.id}`,this.formData);
+    return this.http.put(`${this.baseUrl}/${this.formData.id}`,this.formData);
   }
 
+  deletePaymentDetail(id:number){
+    return this.http.delete(`${this.baseUrl}/${id}`);
+  }
 }
